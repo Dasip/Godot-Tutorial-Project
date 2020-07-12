@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/UI_Control.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Panel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/DeathScreen.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/GameMenu/GameMenu.tscn" type="PackedScene" id=4]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" parent="Control" instance=ExtResource( 2 )]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -253.0
+margin_right = 0.0
+
+[node name="DeathScreen" parent="Control" instance=ExtResource( 3 )]
+visible = false
+
+[node name="Menu" parent="Control" instance=ExtResource( 4 )]
